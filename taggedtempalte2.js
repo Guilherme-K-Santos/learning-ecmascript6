@@ -1,0 +1,18 @@
+function real(partes, ...valores) {
+    const resultado = []
+    console.log(partes)
+    console.log(valores)
+    valores.forEach((valor, indice) => {
+        valor = isNaN(valor) ? valor : `R$${valor.toFixed(2)}`
+        resultado.push(partes[indice], valor)
+    })
+    return resultado.join('')
+}
+
+const preco = 29.99
+const precoParcela = 11
+
+console.log(`1x de ${preco} ou 3x de ${precoParcela}.`)
+//sem a função
+console.log(real `1x de ${preco} ou 3x de ${precoParcela}.`)
+// com a função
